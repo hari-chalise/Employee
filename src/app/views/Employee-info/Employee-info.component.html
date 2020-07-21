@@ -1,0 +1,110 @@
+<div class="card example-container mat-elevation-z8">
+    <!-- <div class="row"> -->
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i> Employee Table
+    </div>
+    <form class="form-inline waves-light" mdbWavesEffect style="margin-left: auto; margin-bottom:px;">
+        <div class="md-form mt-0">
+
+            <input (keyup)="applyFilter($event.target.value)" class="form-control mr-sm-2" type="text" placeholder="Search">
+        </div>
+    </form>
+    <!-- <div [formGroup]="filterForm">
+            <mat-form-field>
+                <input matInput formControlName="filterValue" (keyup)="applyFilter($event.target.value)" placeholder="filter">
+            </mat-form-field>
+        </div> -->
+    <!-- </div> -->
+    <div class="table-container table-height" [perfectScrollbar]="{wheelPropagation: false}">
+        <mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="select">
+                <mat-header-cell *matHeaderCellDef class="cell-max-width-55">
+                    <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+                    </mat-checkbox>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let row" class="cell-max-width-55">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+                    </mat-checkbox>
+                </mat-cell>
+            </ng-container>
+            <!-- Position id -->
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header class="cell-max-width-55"> S.N. </mat-header-cell>>
+                <mat-cell *matCellDef="let element" class="cell-max-width-55 "> {{element.sn}} </mat-cell>>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="address">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Address </mat-header-cell>>
+                <mat-cell *matCellDef="let element"> {{element.address.province}},{{element.address.district}}, {{element.address.manucipality}} </mat-cell>>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="gender">
+                <mat-header-cell *matHeaderCellDef mat-sort-header class="cell-max-width"> Gender </mat-header-cell>>
+                <mat-cell *matCellDef="let element" class="cell-max-width "> {{element.gender}} </mat-cell>>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="company">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Company </mat-header-cell>>
+                <mat-cell *matCellDef="let element"> {{element.company}} </mat-cell>>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="designation">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Designation </mat-header-cell>>
+                <mat-cell *matCellDef="let element"> {{element.designation}} </mat-cell>>
+            </ng-container>
+            <!-- Name Column -->
+            <!-- <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>>
+        </ng-container> -->
+            <!-- Name Column -->
+            <!-- <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>>
+        </ng-container> -->
+            <!-- Name Column -->
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>>
+                <mat-cell *matCellDef="let element">
+                    <!-- <button type="button" class="btn-btn-primary">Edit</button>
+            <button type="button" class="btn-btn-warn">Delete</button> -->
+                    <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon button with a vertical three dot icon">
+              <mat-icon></mat-icon>
+            </button> -->
+                    <!-- <mat-menu #menu="matMenu"> -->
+                    <button mat-button color="primary" style="color: #2600ff; border-radius: 100%;">Edit</button>
+                    <!-- <button mat-menu-item> -->
+                    <!-- <mat-icon>Delete</mat-icon> -->
+                    <button mat-button color="warn" style="margin: auto; color: #ff0000;">delete</button>
+                    <!-- </mat-menu> -->
+                    <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+
+              </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>Edit</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>Delete</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+            </mat-menu> -->
+                </mat-cell>
+            </ng-container>
+
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>>
+        </mat-table>
+    </div>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>

@@ -1,0 +1,31 @@
+mat-table {
+    width: 100%;
+    border: solid;
+}
+
+mat-cell {
+    border: lighten($color: #000000, $amount: 0);
+}
+
+.sticky {
+    position: sticky;
+    // align-content: center;
+}
+
+.table-height {
+    height: calc(100vh - 220px);
+}
+
+.cell-max-width {
+    max-width: 80px;
+}
+
+.cell-max-width-55 {
+    max-width: 55px;
+    justify-content: center;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
