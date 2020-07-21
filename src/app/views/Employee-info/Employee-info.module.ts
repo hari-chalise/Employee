@@ -1,3 +1,4 @@
+import { EmployeeFormComponent } from './employee-form.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -30,10 +32,13 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatDividerModule,
     RouterModule.forChild([
       {path: '', component: EmployeeInfoComponent}
     ])
   ],
-  declarations: [EmployeeInfoComponent]
+  declarations: [EmployeeInfoComponent, EmployeeFormComponent],
+  entryComponents: [EmployeeFormComponent]
 })
 export class EmployeeInfoModule { }

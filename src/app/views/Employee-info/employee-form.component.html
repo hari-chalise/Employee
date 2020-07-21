@@ -1,0 +1,90 @@
+<form [formGroup]="employeeForm" (ngSubmit)="saveChanges()">
+    <div class="mat-dialog-title">Add New Employee
+        <span style="margin-left: 400px;"><button mat-button mat-dialog-close>close</button></span>
+    </div>
+    <mat-divider style="margin-bottom: 10px;"></mat-divider>
+    <div mat-dialog-content>
+        <div class="form-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Emp-Id</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="empId">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone No</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="phoneNo">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="address">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Gender</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="gender">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Company</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="company">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Designation</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="designation">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Blood Group</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="bloodGroup">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Martal Status</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="maritalStatus">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Education</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="education">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Basic Salary</mat-label>
+                        <input matInput placeholder="Placeholder" formGroupName="basicSalary">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mat-dialog-actions align="center">
+        <button mat-button type="submit" color="primary" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+        <button mat-button color="warn" mat-dialog-close>Cancel</button>
+
+    </mat-dialog-actions>
+
+</form>

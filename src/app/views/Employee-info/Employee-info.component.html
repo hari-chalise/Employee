@@ -1,20 +1,12 @@
 <div class="card example-container mat-elevation-z8">
     <!-- <div class="row"> -->
     <div class="card-header">
-        <i class="fa fa-align-justify"></i> Employee Table
+        <i class="fa fa-align-justify"></i> Employee Table <span><button type="button" (click) ="onAction(0)" class="btn btn-outline-primary active" style="position: right;">Add</button>
+        </span>
+        <span><button type="button" class="btn btn-outline-primary active" style="float: right;"><input (keyup)="applyFilter($event.target.value)" class="form-control mr-sm-2" type="text" placeholder="Search"></button>
+        </span>
     </div>
-    <form class="form-inline waves-light" mdbWavesEffect style="margin-left: auto; margin-bottom:px;">
-        <div class="md-form mt-0">
 
-            <input (keyup)="applyFilter($event.target.value)" class="form-control mr-sm-2" type="text" placeholder="Search">
-        </div>
-    </form>
-    <!-- <div [formGroup]="filterForm">
-            <mat-form-field>
-                <input matInput formControlName="filterValue" (keyup)="applyFilter($event.target.value)" placeholder="filter">
-            </mat-form-field>
-        </div> -->
-    <!-- </div> -->
     <div class="table-container table-height" [perfectScrollbar]="{wheelPropagation: false}">
         <mat-table [dataSource]="dataSource" matSort>
             <ng-container matColumnDef="select">
@@ -72,30 +64,13 @@
             <ng-container matColumnDef="action">
                 <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>>
                 <mat-cell *matCellDef="let element">
-                    <!-- <button type="button" class="btn-btn-primary">Edit</button>
-            <button type="button" class="btn-btn-warn">Delete</button> -->
-                    <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon button with a vertical three dot icon">
-              <mat-icon></mat-icon>
-            </button> -->
+
                     <!-- <mat-menu #menu="matMenu"> -->
-                    <button mat-button color="primary" style="color: #2600ff; border-radius: 100%;">Edit</button>
+                    <button type="button" class="btn btn-block btn-success" (click)="onAction(element.id)" style="max-width: 55px;">Edit</button>
                     <!-- <button mat-menu-item> -->
                     <!-- <mat-icon>Delete</mat-icon> -->
-                    <button mat-button color="warn" style="margin: auto; color: #ff0000;">delete</button>
-                    <!-- </mat-menu> -->
-                    <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <button type="button" class="btn btn-block btn-danger" (click)="onDelete(element.id)" style="max-width: 70px; margin-left: 10px; margin-bottom: 7px;">Delete</button>
 
-              </button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>
-                  <mat-icon>Edit</mat-icon>
-                  <span>Redial</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>Delete</mat-icon>
-                  <span>Check voice mail</span>
-                </button>
-            </mat-menu> -->
                 </mat-cell>
             </ng-container>
 
