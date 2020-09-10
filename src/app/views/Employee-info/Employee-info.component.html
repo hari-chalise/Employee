@@ -6,7 +6,16 @@
         <span><button type="button" class="btn btn-outline-primary active" style="float: right;"><input (keyup)="applyFilter($event.target.value)" class="form-control mr-sm-2" type="text" placeholder="Search"></button>
         </span>
     </div>
-
+    <hr> Example Of POPOVER
+    <button type="button" class="btn btn-outline-secondary mr-2" [ngbPopover]="content" popoverTitle=""> Show Popover </button>
+    <ng-template #content>
+        <div class="row" style="width: 300px;">
+            <div class="col-sm-4">Adults</div>
+            <div class="col-sm-4">Childs</div>
+            <div class="col-sm-4">Inflant </div>
+        </div>
+    </ng-template>
+    <hr>
     <div class="table-container table-height" [perfectScrollbar]="{wheelPropagation: false}">
         <mat-table [dataSource]="dataSource" matSort>
             <ng-container matColumnDef="select">

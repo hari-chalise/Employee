@@ -9,25 +9,25 @@
                 <div class="col-md-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Emp-Id</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="empId">
+                        <input matInput placeholder="Placeholder" formControlName="empId" readonly>
                     </mat-form-field>
                 </div>
                 <div class="col-md-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Name</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="name">
+                        <input matInput placeholder="Placeholder" formControlName="name" required>
                     </mat-form-field>
                 </div>
                 <div class="col-md-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Phone No</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="phoneNo">
+                        <input matInput placeholder="Placeholder" formControlName="phoneNo" required>
                     </mat-form-field>
                 </div>
                 <div class="col-md-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Email</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="email">
+                        <input matInput placeholder="Placeholder" formControlName="email" required>
                     </mat-form-field>
                 </div>
                 <div class="col-md-4">
@@ -44,10 +44,18 @@
                 </div>
                 <div class="col-md-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Company</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="company">
+                        <mat-label>DOB</mat-label>
+                        <!-- <np-datepicker ([ngModel])="date"></np-datepicker> -->
+                        <input matInput value="" name="date" class="bod-picker" placeholder="Date Of Birth" formControlName="dOb">
                     </mat-form-field>
                 </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Company</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="company" required>
+                    </mat-form-field>
+                </div>
+
                 <div class="col-md-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Designation</mat-label>
@@ -78,11 +86,14 @@
                         <input matInput placeholder="Placeholder" formGroupName="basicSalary">
                     </mat-form-field>
                 </div>
+                <p>
+                    <!-- <np-datepicker ([ngModel])="date"></np-datepicker> -->
+                </p>
             </div>
         </div>
     </div>
     <mat-dialog-actions align="center">
-        <button mat-button type="submit" color="primary" [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+        <button mat-button type="submit" color="primary" cdkFocusInitial>Save</button>
         <button mat-button color="warn" mat-dialog-close>Cancel</button>
 
     </mat-dialog-actions>

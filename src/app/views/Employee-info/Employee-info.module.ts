@@ -16,6 +16,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NpDatepickerModule } from 'angular-nepali-datepicker';
+
 
 @NgModule({
   imports: [
@@ -34,6 +37,8 @@ import {MatDividerModule} from '@angular/material/divider';
     ReactiveFormsModule,
     MatDialogModule,
     MatDividerModule,
+    NgbModule,
+    // NpDatepickerModule,
     RouterModule.forChild([
       {path: '', component: EmployeeInfoComponent}
     ])

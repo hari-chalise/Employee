@@ -1,14 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from './employee.service';
+import { Component, OnInit, ChangeDetectorRef, Inject, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
   styleUrls: ['./Employee-info.component.scss']
 })
-export class EmployeeFormComponent implements OnInit {
+export class EmployeeFormComponent implements OnInit, OnDestroy {
+  private readonly toDestroy$ = new Subject<void>();
   employeeForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  isWorking: boolean;
+  date: Date;
+  constructor(
+    private fb: FormBuilder,
+    private employeeService: EmployeeService,
+    private dialog: MatDialog,
+    private dialogRef: MatDialogRef<EmployeeFormComponent>,
+    private cdr: ChangeDetectorRef,
+    @Inject(MAT_DIALOG_DATA)
+    public data: any,
+  ) { }
 
 
   ngOnInit() {
@@ -18,12 +32,13 @@ export class EmployeeFormComponent implements OnInit {
   private initForm() {
     this.employeeForm = this.fb.group({
       id: 0,
-      empId: 'Emp-234',
+      empId: null,
       name: [null, Validators.required],
-      email: [null, Validators.required, Validators.email],
+      email: [null, [Validators.required, Validators.email]],
       phoneNo: null,
       address: null,
       gender: null,
+      dOb: null,
       company: null,
       designation: null,
       bloodGroup: null,
@@ -34,5 +49,17 @@ export class EmployeeFormComponent implements OnInit {
     });
   }
 
-  saveChanges() {}
+  saveChanges() {
+    this.employeeService.addOrUpdate(this.employeeForm.value)
+    .subscribe(res => {
+      this.dialogRef.close(res);
+      this.isWorking = false;
+    });
+
+  }
+
+  ngOnDestroy() {
+    this.toDestroy$.next();
+    this.toDestroy$.complete();
+  }
 }

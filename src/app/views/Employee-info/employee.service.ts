@@ -213,109 +213,109 @@ const EMPLOYEE = [
     education: 'Bachelor in Computer Application',
     basicSalary: '20000',
   },
-  {
-    id: 9,
-    sn: 9,
-    name: 'Ramchandra',
-    email: 'ram@gmail.com',
-    pNumber: '9867895623',
-    address:
-      {
-        province: 'Gandaki',
-        district: 'Baglung',
-        manucipality: 'Dhorpatan'
-      }
-    ,
-    gender: 'Male',
-    company: 'VIew9',
-    designation: 'Software Engineer',
-    blodGroup: 'O+ve',
-    maritalStatus: 'Single',
-    education: 'Bachelor in Computer Application',
-    basicSalary: '20000',
-  },
-  {
-    id: 10,
-    sn: 10,
-    name: 'Ramchandra',
-    email: 'ram@gmail.com',
-    pNumber: '9867895623',
-    address:
-      {
-        province: 'Gandaki',
-        district: 'Baglung',
-        manucipality: 'Dhorpatan'
-      }
-    ,
-    gender: 'Male',
-    company: 'Ezinesoft',
-    designation: 'Software Engineer',
-    blodGroup: 'O+ve',
-    maritalStatus: 'Single',
-    education: 'Bachelor in Computer Application',
-    basicSalary: '20000',
-  },
-  {
-    id: 11,
-    sn: 11,
-    name: 'Ramchandra',
-    email: 'ram@gmail.com',
-    pNumber: '9867895623',
-    address:
-      {
-        province: 'Gandaki',
-        district: 'Baglung',
-        manucipality: 'Dhorpatan'
-      }
-    ,
-    gender: 'Male',
-    company: 'Ezinesoft',
-    designation: 'Software Engineer',
-    blodGroup: 'O+ve',
-    maritalStatus: 'Single',
-    education: 'Bachelor in Computer Application',
-    basicSalary: '20000',
-  },
-  {
-    id: 12,
-    sn: 12,
-    name: 'Ramchandra',
-    email: 'ram@gmail.com',
-    pNumber: '9867895623',
-    address:
-      {
-        province: 'Gandaki',
-        district: 'Baglung',
-        manucipality: 'Dhorpatan'
-      }
-    ,
-    gender: 'Male',
-    company: 'Ezinesoft',
-    designation: 'Software Engineer',
-    blodGroup: 'O+ve',
-    maritalStatus: 'Single',
-    education: 'Bachelor in Computer Application',
-    basicSalary: '20000',
-  },
-  {
-    id: 13,
-    sn: 13,
-    name: 'Ramchandra',
-    email: 'ram@gmail.com',
-    pNumber: '9867895623',
-    address:
-      {
-        province: 'Gandaki',
-        district: 'Baglung',
-        manucipality: 'Dhorpatan'
-      }
-    ,
-    gender: 'Male',
-    company: 'Ezinesoft',
-    designation: 'Software Engineer',
-    blodGroup: 'O+ve',
-    maritalStatus: 'Single',
-    education: 'Bachelor in Computer Application',
-    basicSalary: '20000',
-  }
+  // {
+  //   id: 9,
+  //   sn: 9,
+  //   name: 'Ramchandra',
+  //   email: 'ram@gmail.com',
+  //   pNumber: '9867895623',
+  //   address:
+  //     {
+  //       province: 'Gandaki',
+  //       district: 'Baglung',
+  //       manucipality: 'Dhorpatan'
+  //     }
+  //   ,
+  //   gender: 'Male',
+  //   company: 'VIew9',
+  //   designation: 'Software Engineer',
+  //   blodGroup: 'O+ve',
+  //   maritalStatus: 'Single',
+  //   education: 'Bachelor in Computer Application',
+  //   basicSalary: '20000',
+  // },
+  // {
+  //   id: 10,
+  //   sn: 10,
+  //   name: 'Ramchandra',
+  //   email: 'ram@gmail.com',
+  //   pNumber: '9867895623',
+  //   address:
+  //     {
+  //       province: 'Gandaki',
+  //       district: 'Baglung',
+  //       manucipality: 'Dhorpatan'
+  //     }
+  //   ,
+  //   gender: 'Male',
+  //   company: 'Ezinesoft',
+  //   designation: 'Software Engineer',
+  //   blodGroup: 'O+ve',
+  //   maritalStatus: 'Single',
+  //   education: 'Bachelor in Computer Application',
+  //   basicSalary: '20000',
+  // },
+  // {
+  //   id: 11,
+  //   sn: 11,
+  //   name: 'Ramchandra',
+  //   email: 'ram@gmail.com',
+  //   pNumber: '9867895623',
+  //   address:
+  //     {
+  //       province: 'Gandaki',
+  //       district: 'Baglung',
+  //       manucipality: 'Dhorpatan'
+  //     }
+  //   ,
+  //   gender: 'Male',
+  //   company: 'Ezinesoft',
+  //   designation: 'Software Engineer',
+  //   blodGroup: 'O+ve',
+  //   maritalStatus: 'Single',
+  //   education: 'Bachelor in Computer Application',
+  //   basicSalary: '20000',
+  // },
+  // {
+  //   id: 12,
+  //   sn: 12,
+  //   name: 'Ramchandra',
+  //   email: 'ram@gmail.com',
+  //   pNumber: '9867895623',
+  //   address:
+  //     {
+  //       province: 'Gandaki',
+  //       district: 'Baglung',
+  //       manucipality: 'Dhorpatan'
+  //     }
+  //   ,
+  //   gender: 'Male',
+  //   company: 'Ezinesoft',
+  //   designation: 'Software Engineer',
+  //   blodGroup: 'O+ve',
+  //   maritalStatus: 'Single',
+  //   education: 'Bachelor in Computer Application',
+  //   basicSalary: '20000',
+  // },
+  // {
+  //   id: 13,
+  //   sn: 13,
+  //   name: 'Ramchandra',
+  //   email: 'ram@gmail.com',
+  //   pNumber: '9867895623',
+  //   address:
+  //     {
+  //       province: 'Gandaki',
+  //       district: 'Baglung',
+  //       manucipality: 'Dhorpatan'
+  //     }
+  //   ,
+  //   gender: 'Male',
+  //   company: 'Ezinesoft',
+  //   designation: 'Software Engineer',
+  //   blodGroup: 'O+ve',
+  //   maritalStatus: 'Single',
+  //   education: 'Bachelor in Computer Application',
+  //   basicSalary: '20000',
+  // }
 ];
